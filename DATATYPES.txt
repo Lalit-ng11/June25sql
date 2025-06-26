@@ -1,0 +1,68 @@
+Revisoin 1:
+.create Database,show database,drop database.
+.Table- row + column => create table,insert values
+ -> 2ways=> insert into tn(col) values();
+	    insert into tn values();
+
+-----------------------Data Types of SQL---------------------------------
+1.Numeric data types.
+TINYINT => 1byte -128 to 127
+SMALLINT => 2BYTES -32,768 TO 32,767
+MEDIUMINT => 3BYTES -8,388,608 TO 8,388,607
+INT/INTEGER => 4BYTES -9,223,372,036,854,775,808 TO 9,223,372,036,854,775,807
+DECIMAL/NUMERIC => VARIES 
+FLOAT => 4BYTES => APPROXIMATE VALUE
+DOUBLE => 8BYTES => APPROXIMATE VALUE
+
+2.STRING/TEXT DATA TYPE
+CHAR(n)=> n BYTES => 0 TO 255 BYTES
+VARCHAR(n) => LENGTH + 1BYTES => 0 TO 65,535 BYTES
+TEXT => UPTO 64KB => 65,535 BYTES
+TINYTEXT => UPTO 255 BYTES => 255 BYTES
+MEDIUMTEXT => UPTO 16MB 16,777,215 CHARACTERS
+LONGTEXT => UPTO 4GB 4,294,967,295 CHARACTERS
+
+3.DATE DATA TYPES
+DATE => YYYY-MM-DD 
+DATETIME => YYYY-MM-DD HH:MM:SS
+TIMESTAMP => YYYY-MM-DD HH:MM:SS
+TIME => HH:MM:SS
+YEAR => YYYY
+
+4.BOOLEAN DATA TYPE
+BOOLEAN OR BOOL => 0-FALSE , 1-TRUE
+
+5.BINARY DATA TYPE
+BINARY(n) 0-255 BYTES
+VARBINARY(n) 0 TO 65535
+BLOB -> 64KB
+TINYBLOB,MEDIUMBLOB,LONGBLOB -> UPTO 4GB.
+
+.NAME CHAR(10) =>'RAJ' => 'RAJ       '[7EXTRA SPACES]
+.NAME VARCHAR(10) => 'RAJ' => 'RAJ'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
