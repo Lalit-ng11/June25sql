@@ -1,0 +1,49 @@
+---------- SQL ---------
+1.Data base creation
+2.Table creation + insertion + import wizard
+3.Where clause [filter ] + between + in +not null + null + Like
+4.Aggregate function :- max(),min(),count(),sum(),avg()
+5.Drop,Delete,Truncate.
+6.Distinct keyword
+7.Alter Table :- 
+8.Joins:-
+ -Types 
+  1.Inner Join
+  2.Left Join
+  3.Right Join
+  4.Full outer Join
+  5.Cross Join:- Cartesian Product.
+  6.Self Join.
+9.Constraints.
+10.Having clause.
+11.Views => query form = virtual table.
+
+Syntax:-
+create view view_name as
+select col1,col2 
+from table_name where cond;
+
+12.Union and Union all
+13.Index => im having a book of 500 pages.
+            -> go page by page. it'll take some time.
+ -we apply index on Tables.when we're having a large data set.
+  if we're fetching that data so it'll take much time.
+
+-Syntax :
+ create index index_name
+ on table_name(col1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
