@@ -160,10 +160,65 @@ select concat('xxxxxxxxx', substring(`phone_number`,
    -- commands :- commit = save changes , rollback = undo changes
 			-- Savepoint = create a checkpoint for partial rollback.
 
+-- 4. DCL - Data Control Language
+
+create table dcl_data(
+id int , Name varchar(40) , Salary decimal(10,2));
+
+insert into dcl_data values(1,'John Doe',20000),
+(2,'Alice K',40000),(3,'Rockey J',60000);
+  
+  select * from dcl_data;
+  
+show grants for 'newUser1'@'localhost'; 
+
+GRANT CREATE USER ON *.* TO 'root'@'localhost'  WITH GRANT OPTION;
+FLUSH privileges; -- remove privilages
+CREATE USER 'newUser1'@'localhost' IDENTIFIED BY 'newUser1';
+ 
+grant select , insert on june25_batch.dcl_data to 'newUser1'@'localhost';
+
+revoke insert on june25_batch.dcl_data from  'newUser1'@'localhost';
+
+ -- 5 TCL - Transaction Control Language
+-- commands :- commit = save changes , rollback = undo changes
+			-- Savepoint = create a checkpoint for partial rollback.
+            
+create table bank_acc(Acc_no int , Name varchar(40) , 
+Balance decimal(10,2));
+insert into bank_acc values
+(101,'John Doe',1000),(101,'Alice B',1500);
+select * from  bank_acc;
+update bank_acc set acc_no = 102 where balance = 1500;
+select * from  bank_acc;
+
+start transaction;
+update bank_acc set balance = balance - 500 where acc_no = 101;
+
+savepoint debited_amount;
+update bank_acc set balance = balance + 500 where acc_no= 102;
+
+rollback to debited_amount;
+
+commit ;
+rollback;
 
 
-  
-  
+-- PL-SQL Function Syntax
+-- CREATE DEFINER = 'ROOT'@'LOCALHOST' FUNCTION `FUN_NAME`()
+-- RETURNS 
+--  
+--  READS SQL DATA
+--  DETERMINSTIC
+--  
+--  BEGIN
+--      QUERIES
+-- END
+
+-- SYNTAX TO CALL FUNCTION 
+-- SELECT FUNCTION_NAME() AS ALIAS_NAME;
+
+
 
 
 
